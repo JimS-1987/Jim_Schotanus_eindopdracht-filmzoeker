@@ -1,0 +1,179 @@
+* {
+  list-style: none;
+}
+
+body {
+  background: #2d394b;
+  background: -webkit-gradient(linear, left top, right top, from(#040b14), to(#041434));
+  background: linear-gradient(90deg, #040b14 0%, #041434 100%);
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+
+.parent {
+  display: -ms-grid;
+  display: grid;
+  min-width: 460px;
+  float: inline-start;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 300px 300px 300px 1000px;
+      grid-template-rows: 300px 300px 300px 1000px;
+      grid-template-areas: "header" "search" "buttons" "main";
+}
+
+.header {
+  font-size: 40px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttons {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: buttons;
+  float: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+  font-size: x-large;
+  border: blanchedalmond;
+  border-style: groove;
+  border-radius: 15px;
+}
+
+.bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: search;
+  margin-top: 70px;
+  margin-left: 75%;
+  border: none;
+  margin-top: 8px;
+  font-size: 20px;
+  background-color: #d3c8ba;
+}
+
+.but {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 35px;
+  font-size: x-large;
+  border-style: solid;
+  border-color: #f4f4fc;
+  cursor: pointer;
+  color: gainsboro;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movie-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: main;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.movie-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.movie__list-li__img {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 500px;
+}
+
+.movie__list-li__img:hover {
+  width: 320px;
+  height: 520px;
+  -webkit-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease;
+}
+
+@media (min-width: 700px) {
+  .parent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 300px 194.4px 300px 1000px;
+        grid-template-rows: 300px 194.4px 300px 1000px;
+    gap: 9px 7px;
+        grid-template-areas: "header" "search" "buttons" "movies";
+  }
+  .movie-list {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: movies;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+  }
+}
+/*# sourceMappingURL=style.css.map */

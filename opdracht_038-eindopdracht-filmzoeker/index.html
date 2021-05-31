@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer src="scripts/movies.js"></script>
+  <script defer src="scripts/scripts.js"></script>
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <title>Document</title>
+</head>
+
+<body class="parent">
+  <header class="header">
+    <h1>filmzoeker</h1>
+  </header>
+  <nav>
+    <div class="bar">
+      <input class="search" type="search" placeholder="Search.." id="search-bar" />
+
+    </div>
+    <div class="buttons" id="radio-buttons">
+      <input class="but" type="radio" name="movie" value="new" id="new-btn" />New
+      <input class="but" type="radio" name="movie" value="avengers" id="avengers-btn" />Avengers
+      <input class="but" type="radio" name="movie" value="princess" id="princess-btn" />Princess
+      <input class="but" type="radio" name="movie" value="batman" id="batman-btn" />Batman
+      <input class="but" type="radio" name="movie" value="x-men" id="xmen-btn" />X-Men
+      <input class="but" type="radio" name="movie" value="reset" id="reset-btn" />Reset
+
+    </div>
+  </nav>
+  <main>
+    <ul class="movie-list" id="movie-posters"></ul>
+  </main>
+
+</body>
+
+</html>

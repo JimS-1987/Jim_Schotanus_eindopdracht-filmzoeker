@@ -1,0 +1,125 @@
+* {
+  list-style: none;
+}
+
+@mixin flexboxCenterAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: rgb(45, 57, 75);
+  background: linear-gradient(
+    90deg,
+    rgb(4, 11, 20) 0%,
+    rgba(4, 20, 52, 1) 100%
+  );
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+
+.parent {
+  display: grid;
+  min-width: 460px;
+  float: inline-start;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px 300px 300px 1000px;
+  grid-template-areas:
+    "header"
+    "search"
+    "buttons"
+    "main";
+}
+
+//header
+.header {
+  font-size: 40px;
+  grid-area: header;
+  margin-top: 50px;
+  @include flexboxCenterAll();
+}
+
+.buttons {
+  grid-area: buttons;
+  float: center;
+  @include flexboxCenterAll();
+  margin-top: 15px;
+  font-size: x-large;
+  border: blanchedalmond;
+  border-style: groove;
+  border-radius: 15px;
+}
+.bar {
+  @include flexboxCenterAll();
+}
+.search {
+  grid-area: search;
+  margin-top: 70px;
+  margin-left: 75%;
+  border: none;
+  margin-top: 8px;
+  font-size: 20px;
+  background-color: rgb(211, 200, 186);
+}
+
+.but {
+  box-sizing: border-box;
+  margin: 35px;
+  font-size: x-large;
+  border-style: solid;
+  border-color: rgb(244, 244, 252);
+  cursor: pointer;
+  color: gainsboro;
+  @include flexboxCenterAll();
+}
+
+.movie-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  grid-area: main;
+  @include flexboxCenterAll();
+  position: absolute;
+}
+.movie-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.movie__list-li__img {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 500px;
+}
+.movie__list-li__img:hover {
+  width: 320px;
+  height: 520px;
+
+  -webkit-transition: all 0.3s 0s ease;
+  -moz-transition: all 0.3s 0s ease;
+  -o-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease;
+}
+
+@media (min-width: 700px) {
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 194.4px 300px 1000px;
+    gap: 9px 7px;
+    grid-template-areas:
+      "header"
+      "search"
+      "buttons"
+      "movies";
+  }
+  .movie-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    grid-area: movies;
+    @include flexboxCenterAll();
+    position: absolute;
+  }
+}
